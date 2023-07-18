@@ -1,6 +1,6 @@
 const newBooks = document.getElementById('new-books');
 
-class Book {
+export default class Book {
     bookList;
 
     constructor(title, author) {
@@ -52,5 +52,5 @@ class Book {
     }
 }
 
-const shelf = new Book();
-export default shelf;
+// const shelf = new Book();
+// export default shelf;

@@ -1,21 +1,23 @@
 import {
-    bookTitle, bookAuthor, button, newBooks, navList, theDate, sections,
-  } from './variable.js';
+  bookTitle, bookAuthor, button, newBooks, navList, sections,
+} from './variable.js';
 
-import shelf from './BookModule.js';    
+import Book from './BookModule.js';
 
-    shelf.saveStorage();
+const shelf = new Book();
+
+shelf.saveStorage();
 
 const showFromStorage = () => {
-    button.addEventListener('click', (e) => {
+  button.addEventListener('click', (e) => {
     e.preventDefault();
-  
+
     const title = bookTitle.value;
     const author = bookAuthor.value;
-  
+
     if (!title || !author) return;
     const book = new Book(title, author);
-  
+
     book.loadIntoStorage();
     book.saveStorage();
   });
@@ -28,7 +30,7 @@ const AddNewBook = () => {
   });
 };
 
-const showOff = () =>{
+const showOff = () => {
   navList.addEventListener('click', (e) => {
     const { main } = e.target.dataset;
     sections.forEach((link) => link.classList.remove('display'));
@@ -37,5 +39,5 @@ const showOff = () =>{
 };
 
 export {
-    showOff, AddNewBook, showFromStorage,
+  showOff, AddNewBook, showFromStorage,
 };

@@ -4,10 +4,9 @@ const button = document.querySelector('#add-btn');
 
 const newBooks = document.querySelector('#new-books');
 const navList = document.querySelector('#nav-list');
-const theDate = document.querySelector('#date');
 
 const sections = document.querySelectorAll('.main');
 
 export {
-  bookTitle, bookAuthor, button, newBooks, navList, theDate, sections,
+  bookTitle, bookAuthor, button, newBooks, navList, sections,
 };
